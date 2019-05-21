@@ -1,0 +1,15 @@
+try:
+    n=int(input())
+    temp=n
+    s=0
+    if(temp<=10000):
+        while(temp!=0):
+            r=temp%10
+            s=s+(r*r*r)
+            temp=temp//10
+    if(n==s):
+        print("yes")
+    else:
+        print("no")
+except:
+    print("invalid")
