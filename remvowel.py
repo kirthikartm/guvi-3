@@ -1,0 +1,16 @@
+
+a=input()
+v=['a','e','i','o','u','A','E','I','O','U']
+for i in a:
+    if i in v:
+        a=a.replace(i,"")
+a=list(a)
+l=len(a)
+def reve(a,i):
+    if l//2>i:
+        a[i],a[l-i-1]=a[l-i-1],a[i]
+        reve(a,i+1)
+reve(a,0)
+str=""
+a=str.join(a)
+print(a)
